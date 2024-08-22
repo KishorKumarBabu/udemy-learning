@@ -6,17 +6,12 @@
     <title>Portfolio</title>
   </head>
   <body>
+    <div class="bar">
     <h1>Kishor Kumar's Portfolio</h1>
+    <a style="margin-left: 60%; font-size:25px" href="./about.html">About Me</a>
+  </div>
     <h2>I'm a Web Developer</h2>
     <div class="cont">
-      <div class="movi">
-        <a href="./project/movi.html">Movie Ranking Project</a>
-        <img src="./image/movi.png" alt="" />
-      </div>
-      <div class="movi">
-        <a href="./project/invitation.html">Birthday invite Project</a>
-        <img  src="./image/berthdainvit.png" alt="">
-      </div>
       <div class="movi">
         <a href="./project/login form.html">Login form</a>
         <img src="./image/log.png" alt="">
@@ -34,9 +29,18 @@
         <img src="./image/hot.png" alt="">
       </div>
       <div class="movi">
+        <a href="./project/studentform/studentform.html">Student form</a>
+        <img src="./image/Screenshot (60).png" alt="">
+      </div>
+      <div class="movi">
         <a href="./project/booksky/booksky.html">Booksky</a>
         <img src="./image/booksky.png" alt="">
       </div>
+    </div>
+    <div class="contact">
+      <h3>Contact</h3>
+      <hr>
+      <p>Phone:9600817790 <br>Email:kishorkumarbabu5@gmail<br>Linkedin:<a style="font-size:15px;padding: 0;margin-top: 0;" href="https://www.linkedin.com/in/kishor-kumar-65379628b">kishor kumar</a></p>
     </div>
   </body>
   <style>
@@ -65,18 +69,34 @@
     a {
       background-color: black;
       color: white;
-      padding: 5px;
+      padding: 8px;
       display: inline-block;
+      font-size: 20px;
+      margin-top: 10px;
     }
-    h1{
+    .bar{
         background-color: black;
         color: white;
-        text-align: center;
         border-radius: 10px;
+    }
+    h1{
+      display: inline-block;
     }
     h2{
         color: darkgray;
         text-align:center;
     }
+    a:hover{
+      color: lightgray;
+    }
+    .contact{
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        margin: 0%;
+        padding: 5px;
+    }
+
   </style>
 </html>
