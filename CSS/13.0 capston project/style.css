@@ -96,14 +96,18 @@ h1,p{
     display: inline-block;
     width: 300px;
     margin: 30px;
+        transition: width 0.5s ease;
 }
 .project img{
     width: 300px;
     height: 300px;
-    object-fit:cover;
+    
+        transition: width 0.5s ease;
+    
 }
 .project h5{
     font-size: 20px;
+        transition: width 0.5s ease;
 }
 .project p{
     color: #2AC2FA;
@@ -165,4 +169,40 @@ button:hover{
 a{
     text-decoration: none;
 }
-
+.perfume:hover{
+    width: 400px; 
+}
+.perfume:hover img {
+    width: 100%; 
+  }
+.perfume:hover p {
+    transform: scale(1.5); 
+  }
+.booksky:hover{
+    width: 400px; 
+}
+.booksky:hover img {
+    width: 100%; 
+  }
+.booksky:hover p {
+    transform: scale(1.1); 
+  }
+  .booksky:hover{
+    width: 400px; 
+}
+.booksky:hover img {
+    width: 100%; 
+  }
+.booksky:hover p {
+    transform: scale(1.1); 
+  }
+.BootStrap:hover{
+    width: 400px; 
+}
+.BootStrap:hover img {
+    width: 100%; 
+  }
+.BootStrap:hover p {
+    transform: scale(1.1); 
+  }
+  
