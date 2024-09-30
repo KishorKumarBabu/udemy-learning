@@ -2,10 +2,13 @@
  document.querySelectorAll(".drum")[i].addEventListener('click', function() {
     var buttoninnerHtml=this.innerHTML;
     macksound(buttoninnerHtml)
+    buttonanimation(buttoninnerHtml)
     
 });}
 document.addEventListener("keypress",function(event){
     macksound(event.key)
+    buttonanimation(event.key)
+    
 })
 function macksound(key){
     switch (key) {
@@ -42,4 +45,12 @@ function macksound(key){
             break;
     }
 };
+function buttonanimation(corre){
+    var activat=document.querySelector("."+corre)
+    activat.classList.add("pressed")
+    setTimeout(function(){
+        activat.classList.remove("pressed")
+    },1000)
+
+}
 
