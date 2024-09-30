@@ -1,5 +1,3 @@
-$(document).ready(function(){
-    $("h1").css("color","red");
-    console.log($("button").css("background-color","red"))
-
+$("button").click(function(){
+    $("h1").slideUp().slideDown().animate({opacity:0.1})
 })
