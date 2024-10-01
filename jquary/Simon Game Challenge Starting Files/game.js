@@ -1,4 +1,4 @@
-var buttonColour = ["red", "blue", "green", "yellow"];
+var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 var started = false;
@@ -19,8 +19,8 @@ $(".btn").click(function () {
 });
 
 function checkAnswer(currentLevel) {
-  if (gamePattern[currentLevel] == userClickedPattern[currentLevel]) {
-    if (userClickedPattern.length == gamePattern.length)
+  if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+    if (userClickedPattern.length === gamePattern.length)
       setTimeout(function () {
         nextSequence();
       }, 1000);
@@ -53,11 +53,11 @@ function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
 }
-function animatePress(currentColour) {
-  $("#" + currentColour).addClass("pressed");
+function animatePress(currentcolour) {
+  $("#" + currentcolour).addClass("pressed");
 
   setTimeout(function () {
-    $("#" + currentColour).removeClass("pressed");
+    $("#" + currentcolour).removeClass("pressed");
   }, 100);
 }
 function startOver() {
