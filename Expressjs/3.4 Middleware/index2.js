@@ -2,7 +2,7 @@ import express from "express";
 import morgen from "morgan"
 const app = express();
 const port = 3000;
-app.use(morgen("dev"))
+app.use(morgen("combined"))
 app.get("/", (req, res) => {
   res.send("Hello");
 });

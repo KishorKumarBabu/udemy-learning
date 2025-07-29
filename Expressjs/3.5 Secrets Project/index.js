@@ -4,37 +4,37 @@
 import express from "express";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import bodyparser from "body-parser";
+import bodyParser from "body-parser";
 const port = 3000;
 const app = express();
-var athentication = false;
+var atentication = false;
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
-app.use(bodyparser.urlencoded({ extended: true }));
-
-app.get("/", (req, res) => {
+const __dirname=dirname(fileURLToPath(import.meta.url));
+app.use(bodyParser.urlencoded({extended:true}))
+app.get("/", (req,res)=>{
   res.sendFile(__dirname + "/public/index.html");
-});
-function check(req, res, next) {
-  const password = req.body["password"];
-  var orgpass = "kishor";
-  if (password == orgpass) {
-    athentication = true;
+})
+
+const passcheck =(req,res, next)=>{
+  const password =req.body["password"]
+  if (password ==="kishor"){
+    atentication =true
   }
-  next()
+  next();
 }
 
-app.use(check);
+app.use(passcheck)
 
-app.post("/check",(req,res)=>{
-    if(athentication){
-    res.sendFile(__dirname+"/public/secret.html")
-    }
-    else{
-        res.sendFile(__dirname + "/public/index.html");
-    }
+app.post("/check", (req,res)=>{
+  if (atentication){
+    res.sendFile(__dirname + "/public/secret.html");
+  }
+  else {
+    res.sendFile(__dirname + "/public/index.html");
+  }
 })
+
+
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

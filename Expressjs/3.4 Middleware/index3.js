@@ -2,13 +2,13 @@ import express from "express";
 
 const app = express();
 const port = 3000;
-function logger(req, res, next) {
-  console.log("request methoed:", req.method);
-  console.log("request URL:", req.url);
+const http= (req, res, next)=>{
+console.log("Request recived:", req.method)
+console.log("Request url:", req.url)
 
-  next();
+next();
 }
-app.use(logger);
+app.use(http)
 
 app.get("/", (req, res) => {
   res.send("Hello");
